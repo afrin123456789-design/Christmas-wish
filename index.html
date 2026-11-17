@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0a1d">
+  <meta name="description" content="A little Christmas, a little love. A winter journey, a little tree to trim, and a letter you can send to someone special.">
+  <title>A Little Christmas, A Little Love · Everyday with Afrin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/studio.css">
+  <link rel="stylesheet" href="css/story.css">
+  <link rel="stylesheet" href="css/curtain.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/story.css">
+  <link rel="stylesheet" href="css/curtain.css">
+</head>
+<body>
+  <canvas class="snow-canvas" id="snowCanvas" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Everyday with Afrin, back to the top"><span class="brand-star">✳</span><span>everyday <i>with</i> afrin</span></a>
+    <button class="snow-toggle" id="snowToggle" type="button" aria-pressed="true"><span aria-hidden="true">❄</span><span class="snow-label">Snow on</span></button>
+  </header>
+
+  <main id="top">
+    <!-- 1. Welcome: lavender dusk, aurora, a village of warm windows -->
+    <section class="hero" id="welcome" data-scene="hero" aria-labelledby="heroTitle">
+      <div class="aurora" aria-hidden="true"><span></span><span></span></div>
+      <div class="moon" aria-hidden="true"></div>
+      <div class="scenery" data-scenery aria-hidden="true">
+        <div class="layer" data-gen="ridge" data-seed="5" data-color="#7c67b8" data-top="210" data-base="600"></div>
+        <div class="layer" data-gen="ridge" data-seed="12" data-color="#5a4a94" data-top="300" data-base="600"></div>
+        <div class="layer" data-gen="village" data-seed="3" data-color="#2d2357" data-roof="#f3efff" data-base="560"></div>
+        <div class="layer" data-gen="pines" data-seed="9" data-color="#241a48" data-min="70" data-max="150" data-base="600"></div>
+        <div class="layer" data-gen="snowfield" data-color="#efe8f8"></div>
+      </div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="rule"></span> A season for the little things</p>
+        <h1 id="heroTitle">A little Christmas, <em>a little love.</em></h1>
+        <p class="hero-intro">A small, warm corner made for wonder, for the people who make life brighter, and for a letter you can send to someone you love.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#christmas-note">Step inside <span aria-hidden="true">↓</span></a>
+          <a class="button button-ghost" href="#gift-studio">Write a letter</a>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#christmas-note" aria-label="Continue to the note"><span></span>scroll</a>
+    </section>
+
+
+    <!-- Curtain story: velvet parts on scroll, then the Christmas story unfolds -->
+    <section class="nativity" id="christmas-story" aria-labelledby="natTitle">
+      <div class="nat-sticky">
+        <div class="nat-stage">
+          <div class="nat-scene s0" data-i="0"><div class="nat-sky"></div><div class="nat-stars" data-stars></div><div class="nat-ground"></div></div><div class="nat-scene s1" data-i="1"><div class="nat-sky"></div><div class="nat-stars"></div><div class="angel" style="left:50%;top:18%"></div><div class="nat-ground"></div></div><div class="nat-scene s2" data-i="2"><div class="nat-sky"></div><div class="nat-stars"></div><svg class="nat-hills" viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0 220 Q240 120 480 200 T960 170 T1440 210 L1440 300 L0 300Z" fill="#2a2058"/><path d="M0 260 Q360 190 720 240 T1440 250 L1440 300 L0 300Z" fill="#4a3a7a"/></svg><div class="road"></div><div class="shepherd" style="animation-duration:14s"></div></div><div class="nat-scene s3" data-i="3"><div class="nat-sky"></div><div class="nat-stars"></div><div class="stable"><div class="roof"></div><div class="wall"></div></div><svg class="nat-hills" viewBox="0 0 1440 300" preserveAspectRatio="none"><path d="M0 240 Q300 160 620 230 T1440 220 L1440 300 L0 300Z" fill="#2a2058"/></svg><div class="nat-ground"></div></div><div class="nat-scene s4" data-i="4"><div class="nat-sky"></div><div class="nat-stars"></div><div class="nat-star"><i></i><i></i></div><div class="stable"><div class="roof"></div><div class="wall"></div><div class="glow"></div></div><div class="manger"></div><div class="baby"></div><div class="nat-ground"></div></div><div class="nat-scene s5" data-i="5"><div class="nat-sky"></div><div class="nat-stars"></div><div class="nat-star"><i></i><i></i></div><div class="nat-beam"></div><div class="angel" style="left:30%;top:24%"></div><div class="angel" style="left:70%;top:24%;animation-delay:-3s"></div><div class="shepherd" style="animation-duration:12s;animation-delay:-6s"></div><div class="nat-ground"></div></div><div class="nat-scene s6" data-i="6"><div class="nat-sky"></div><div class="nat-stars"></div><div class="nat-star"><i></i><i></i></div><div class="nat-beam"></div><div class="stable" style="transform:scale(.8);bottom:36%"><div class="roof"></div><div class="wall"></div></div><div class="gifts"><i></i><i></i><i></i></div><div class="nat-ground"></div></div>
+          <div class="nat-stars-fixed"></div>
+          <div class="nat-bar"></div>
+          <div class="curtain curtain-l"></div>
+          <div class="curtain curtain-r"></div>
+          <div class="valance"></div>
+          <div class="rod"></div>
+          <p class="nat-hint">Keep scrolling to draw back the curtain</p>
+          <div class="nat-text"><div class="nat-line" data-i="0"><p class="ch-num">Prologue</p><h2 id="natTitle">A long night, a quiet hope.</h2><p>For a long time, people waited for good news. Then one night, far from the noise of the world, it came.</p><cite>Isaiah 9:2 · KJV</cite></div><div class="nat-line" data-i="1"><p class="ch-num">Good news</p><h2>An angel brings word.</h2><p>"Fear not, Mary: for thou hast found favour with God. And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS."</p><cite>Luke 1:30–31 · KJV</cite></div><div class="nat-line" data-i="2"><p class="ch-num">The road to Bethlehem</p><h2>A long walk in the cold.</h2><p>A long journey on foot, a town full of travellers, and a young family looking for somewhere to rest.</p><cite>Luke 2:4–5</cite></div><div class="nat-line" data-i="3"><p class="ch-num">There was no room</p><h2>Every inn was full.</h2><p>"And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger; because there was no room for them in the inn."</p><cite>Luke 2:7 · KJV</cite></div><div class="nat-line" data-i="4"><p class="ch-num">Born among the animals</p><h2>The Light of the world, quietly.</h2><p>In the humblest place, under a simple roof, the Light of the world arrived. No crowd, no fanfare, only a mother, a father, and a newborn.</p><cite>Luke 2:6–7</cite></div><div class="nat-line" data-i="5"><p class="ch-num">Shepherds in the field</p><h2>Good tidings of great joy.</h2><p>"Fear not: for, behold, I bring you good tidings of great joy, which shall be to all people. For unto you is born this day in the city of David a Saviour, which is Christ the Lord."</p><cite>Luke 2:10–11 · KJV</cite></div><div class="nat-line" data-i="6"><p class="ch-num">Gifts for the child</p><h2>Peace on earth, good will.</h2><p>"Glory to God in the highest, and on earth peace, good will toward men." Wise travellers followed the star and brought gifts. Now pass the warmth on: write someone a letter.</p><cite>Luke 2:14 · KJV · Matthew 2:11</cite></div></div>
+          <div class="nat-controls">
+            <button type="button" data-nat-prev aria-label="Previous part of the story">‹ Back</button>
+            <span class="nat-count" aria-live="polite">1 of 7</span>
+            <button type="button" data-nat-next aria-label="Next part of the story">Next ›</button>
+          </div>
+          <div class="nat-skip"><a href="#send-link">Skip to sending a letter →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. A note from Afrin: a cabin by the fire -->
+    <section class="note" id="christmas-note" data-scene="cabin">
+      <div class="hearth" aria-hidden="true"></div>
+      <div class="note-inner">
+        <p class="kicker reveal">01 · A note from Afrin</p>
+        <article class="note-card reveal">
+          <p class="note-overline">To whoever found their way here,</p>
+          <h2>May something <em>beautiful find you.</em></h2>
+          <div class="note-body">
+            <p>Christmas isn't always about the presents beneath the tree. Sometimes, it's about the people who make ordinary days feel special, the conversations that stay with us, and the little moments we wish we could keep forever.</p>
+            <p>This little corner of the internet is my way of sharing some warmth, happiness, and a bit of Christmas magic with you.</p>
+            <p>Wherever you are, and whoever you're celebrating with, I hope this season gives you something beautiful to remember.</p>
+          </div>
+          <p class="signature"><span>With warmth,</span><strong class="hand">Afrin ♡</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. The little tree: a particle tree you can turn, light and wish on -->
+    <section class="tree" id="little-tree" data-scene="tree" aria-labelledby="treeTitle">
+      <div class="tree-inner">
+        <p class="kicker reveal">02 · The little tree</p>
+        <div class="tree-heading reveal">
+          <h2 id="treeTitle">Trim it <em>your way.</em></h2>
+          <p>Drag to turn it. Tap an ornament to read its note, or make a wish on the star.</p>
+        </div>
+        <div class="tree-frame reveal" data-mood="aurora" id="treeFrame">
+          <canvas class="tree-canvas" id="treeCanvas" tabindex="0" role="img" aria-label="A glowing Christmas tree you can turn with a drag or the arrow keys"></canvas>
+          <p class="tree-tip" id="treeTip" role="status" aria-live="polite">Drag to turn the tree. Tap an ornament to read a note.</p>
+        </div>
+        <div class="ornament-dots" id="ornamentDots" role="group" aria-label="Ornaments, each with a note"></div>
+        <div class="tree-controls reveal">
+          <button class="button button-primary" id="treeLight" type="button" aria-pressed="false">Light the tree</button>
+          <button class="button button-ghost" id="treeWish" type="button">Make a wish</button>
+          <div class="segmented" role="group" aria-label="Tree mood">
+            <button type="button" data-mood-choice="aurora" aria-pressed="true">Aurora</button>
+            <button type="button" data-mood-choice="ember" aria-pressed="false">Ember</button>
+            <button type="button" data-mood-choice="midnight" aria-pressed="false">Midnight</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Studio: write a letter, watch the postcard take shape -->
+    <section class="studio" id="gift-studio" data-scene="studio" aria-labelledby="studioTitle">
+      <div class="studio-inner">
+        <p class="kicker reveal">03 · Write a letter</p>
+        <div class="studio-heading reveal">
+          <h2 id="studioTitle">Make a little letter <em>for someone.</em></h2>
+          <p>Write it the way you'd say it out loud. The postcard takes shape as you type.</p>
+        </div>
+        <div class="studio-grid">
+          <form class="studio-form panel reveal" id="giftForm" novalidate>
+            <label class="field-label" for="recipient">Who is it for?</label>
+            <input id="recipient" name="recipient" type="text" maxlength="36" placeholder="Their name" autocomplete="off" required>
+            <div class="field-row">
+              <div>
+                <label class="field-label" for="sender">From</label>
+                <input id="sender" name="sender" type="text" maxlength="36" placeholder="Your name" autocomplete="off" required>
+              </div>
+              <div>
+                <label class="field-label" for="occasion">A little feeling</label>
+                <select id="occasion" name="occasion">
+                  <option value="warmth">Warm wishes</option>
+                  <option value="gratitude">Gratitude</option>
+                  <option value="joy">Joy &amp; laughter</option>
+                  <option value="friendship">Friendship</option>
+                  <option value="love">All my love</option>
+                </select>
+              </div>
+            </div>
+            <label class="field-label" for="message">Your message</label>
+            <textarea id="message" name="message" maxlength="420" rows="6" placeholder="Write something only you could say…" required></textarea>
+            <p class="char-count" aria-live="polite"><span id="charCount">0</span> / 420 · longer letters fit gracefully</p>
+
+            <p class="field-label">Paper</p>
+            <div class="swatches" role="group" aria-label="Paper colour">
+              <button class="swatch active" type="button" data-theme="kraft" aria-pressed="true"><span class="sw sw-kraft"></span>Kraft</button>
+              <button class="swatch" type="button" data-theme="aurora" aria-pressed="false"><span class="sw sw-aurora"></span>Aurora</button>
+              <button class="swatch" type="button" data-theme="ember" aria-pressed="false"><span class="sw sw-ember"></span>Ember</button>
+            </div>
+
+            <div class="field-row">
+              <div>
+                <label class="field-label" for="typeface">Lettering</label>
+                <select id="typeface" name="typeface">
+                  <option value="hand">Handwritten</option>
+                  <option value="serif">Classic serif</option>
+                  <option value="italic">Soft italic</option>
+                </select>
+              </div>
+              <div>
+                <label class="field-label" for="music">Background music</label>
+                <select id="music" name="music">
+                  <option value="none">No music</option>
+                  <option value="bells">Gentle bells</option>
+                  <option value="pad">Soft pad</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="button button-primary button-block" id="createGift" type="submit">Seal and send <span aria-hidden="true">✧</span></button>
+            <p class="privacy">Your letter stays in this browser. Nothing is uploaded. Music is generated softly on your device.</p>
+          </form>
+
+          <div class="preview-col reveal">
+            <p class="preview-label"><span>Your postcard</span><span class="live"><i></i>live</span></p>
+            <div class="postcard theme-kraft type-hand" id="postcard">
+              <div class="pc-stamp" aria-hidden="true"><span>Merry</span><span>Christmas</span><span>2026</span></div>
+              <p class="pc-kicker" id="pcKicker">A little warmth for</p>
+              <h3 class="pc-to" id="pcRecipient">Someone special</h3>
+              <p class="pc-message" id="pcMessage">May your days be gentle, your heart be light, and your Christmas be filled with little things that make you smile.</p>
+              <p class="pc-sign">With love, <strong id="pcSender">someone who cares</strong></p>
+              <div class="pc-barcode" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4b. Send it as a link -->
+    <section class="s-make" id="send-link" aria-labelledby="makeTitle">
+      <div class="make-grid">
+        <div class="make-copy reveal">
+          <p class="kicker">Try it now</p>
+          <h2 id="makeTitle">Make a link to <em>a letter.</em></h2>
+          <p>Write a letter, or start from the Christmas message itself. Create the link, open it yourself to see what they will see, then share it.</p>
+          <div class="facts">
+            <p><strong>Private by design.</strong> The letter sits after the <code>#</code> in the link. The website host never receives it.</p>
+            <p><strong>No tracking.</strong> There is no record of who opened the link.</p>
+            <p><strong>Length.</strong> Letters are limited to 420 characters, so links stay short enough for WhatsApp.</p>
+          </div>
+        </div>
+
+        <form class="make-form panel reveal" id="linkForm" novalidate>
+          <label class="field-label" for="s-preset">Start from</label>
+          <select id="s-preset">
+            <option value="own">My own words</option>
+            <option value="christmas">The Christmas message (Luke 2)</option>
+          </select>
+          <label class="field-label" for="s-recipient">Who is it for?</label>
+          <input id="s-recipient" maxlength="36" placeholder="Their name" autocomplete="off" required>
+          <div class="field-row">
+            <div>
+              <label class="field-label" for="s-sender">From</label>
+              <input id="s-sender" maxlength="36" placeholder="Your name" autocomplete="off" required>
+            </div>
+            <div>
+              <label class="field-label" for="s-theme">Paper</label>
+              <select id="s-theme">
+                <option value="kraft">Kraft</option>
+                <option value="aurora">Aurora</option>
+                <option value="ember">Ember</option>
+              </select>
+            </div>
+          </div>
+          <label class="field-label" for="s-message">Your message</label>
+          <textarea id="s-message" maxlength="420" rows="5" placeholder="Write something only you could say…" required></textarea>
+          <p class="char-count"><span id="s-count">0</span> / 420</p>
+          <div class="field-row">
+            <div>
+              <label class="field-label" for="s-typeface">Lettering</label>
+              <select id="s-typeface">
+                <option value="hand">Handwritten</option>
+                <option value="serif">Classic serif</option>
+                <option value="italic">Soft italic</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="s-music">Music on open</label>
+              <select id="s-music">
+                <option value="none">No music</option>
+                <option value="bells">Gentle bells</option>
+                <option value="pad">Soft pad</option>
+              </select>
+            </div>
+          </div>
+          <button class="button button-primary button-block" type="submit">Create the link <span aria-hidden="true">✧</span></button>
+
+          <div class="link-out" id="linkOut" hidden>
+            <p class="field-label">Your link</p>
+            <input id="linkField" readonly aria-label="Share link">
+            <div class="link-actions">
+              <button class="button button-ghost" id="copyLink" type="button">Copy link</button>
+              <a class="button button-share" id="waLink" href="#" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
+              <button class="button button-ghost" id="previewLink" type="button">Open it as the recipient</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 5. Closing: starfield -->
+    <section class="closing" data-scene="closing">
+      <div class="stars" data-stars aria-hidden="true"></div>
+      <div class="closing-inner">
+        <p class="eyebrow reveal">A little kindness goes a long way</p>
+        <h2 class="reveal">The best things <em>are better shared.</em></h2>
+        <p class="closing-copy reveal">Send a little warmth into someone's world today.</p>
+        <a class="button button-primary reveal" href="#gift-studio">Write another letter <span aria-hidden="true">↑</span></a>
+        <a class="text-link reveal" href="story.html">Read how a letter becomes a link <span aria-hidden="true">→</span></a>
+        <p class="sign-off">Everyday with Afrin <span aria-hidden="true">♡</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Everyday with Afrin</span>
+    <span>Made with a little extra wonder ✧</span>
+    <a href="story.html">The story &amp; sharing →</a>
+    <a href="#top">Back to the beginning ↑</a>
+  </footer>
+
+  <!-- Reveal: a wrapped box, an envelope, a letter -->
+  <div class="reveal-modal" id="revealModal" data-step="box" role="dialog" aria-modal="true" aria-labelledby="resultRecipient" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <button class="skip-btn" id="skipReveal" type="button">Skip the magic</button>
+      <div class="reveal-stage">
+        <div class="gift-stage" id="giftStage">
+          <button class="gift-box" id="giftBox" type="button" aria-label="Open the gift">
+            <span class="gb-lid"><span class="gb-lid-ribbon"></span></span>
+            <span class="gb-body"><span class="gb-ribbon-v"></span><span class="gb-ribbon-h"></span><span class="gb-mono">A·F</span></span>
+            <span class="gb-bow" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="envelope-stage" id="envelopeStage">
+          <button class="envelope" id="envelope" type="button" aria-label="Open the envelope">
+            <span class="env-flap"></span>
+            <span class="env-body"></span>
+            <span class="env-seal">♡</span>
+          </button>
+        </div>
+        <article class="letter theme-kraft type-hand" id="letter" aria-live="polite">
+          <p class="letter-to">A little note for</p>
+          <h2 id="resultRecipient">You</h2>
+          <p class="letter-message" id="resultMessage"></p>
+          <p class="letter-sign">With love &amp; warm wishes,<strong id="resultSender"></strong></p>
+        </article>
+      </div>
+      <p class="step-hint" id="stepHint">Tap the box to open it.</p>
+      <div class="modal-actions" id="modalActions" hidden>
+        <button class="button button-primary" id="downloadCard" type="button">Download the postcard</button>
+        <button class="button button-share" id="shareGift" type="button">Share on WhatsApp</button>
+        <div class="modal-row">
+          <button class="text-btn" id="replayGift" type="button">Replay ↺</button>
+          <button class="text-btn" id="muteMusic" type="button" hidden>Mute music</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/snow.js" defer></script>
+  <script src="js/scenery.js" defer></script>
+  <script src="js/tree.js" defer></script>
+  <script src="js/studio.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/share.js" defer></script>
+  <script src="js/curtain.js" defer></script>
+  <script src="js/export.js" defer></script>
+</body>
+</html>

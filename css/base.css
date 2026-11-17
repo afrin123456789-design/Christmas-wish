@@ -1,0 +1,73 @@
+/* Tokens, reset, type, buttons, motion */
+:root{
+  --night:#0c0a1d;
+  --plum:#1b1433;
+  --lavender:#b9a7ff;
+  --mint:#8fe8cf;
+  --amber:#f5c26b;
+  --gold:#e8c27a;
+  --cream:#f6ecd6;
+  --ink:#f5efff;
+  --muted:#b9b2d6;
+  --line:rgba(232,194,122,.22);
+  --burg:#5c1f33;
+  --serif:'Fraunces',Georgia,'Times New Roman',serif;
+  --hand:'Caveat','Segoe Script','Bradley Hand',cursive;
+  --sans:'Manrope',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--night);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg,canvas{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;margin:0;line-height:1.08}
+h1 em,h2 em{color:var(--gold);font-style:italic;font-weight:400}
+p{margin:0}
+a{color:inherit}
+button,input,textarea,select{font:inherit;color:inherit}
+.hand{font-family:var(--hand)}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.snow-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:30;opacity:.75}
+
+/* Top bar */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 clamp(18px,4vw,44px);background:linear-gradient(180deg,rgba(12,10,29,.55),rgba(12,10,29,0));pointer-events:none}
+.topbar > *{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);text-shadow:0 1px 12px rgba(0,0,0,.35)}
+.brand i{font-family:var(--serif);font-weight:400;font-style:italic;color:var(--gold)}
+.brand-star{color:var(--gold);font-size:18px}
+.snow-toggle{display:flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border-radius:40px;border:1px solid rgba(255,255,255,.22);background:rgba(12,10,29,.35);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:12px;cursor:pointer}
+
+/* Buttons */
+.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:.02em;cursor:pointer;border:1px solid transparent;transition:transform .35s var(--ease),background .35s,box-shadow .35s,color .35s;-webkit-tap-highlight-color:transparent}
+.button:hover{transform:translateY(-2px)}
+.button:active{transform:translateY(0) scale(.98)}
+.button-primary{background:linear-gradient(180deg,#f7d996,#e3b765);color:#2a1a0c;box-shadow:0 10px 30px -10px rgba(232,194,122,.6)}
+.button-primary:hover{box-shadow:0 16px 40px -10px rgba(232,194,122,.75)}
+.button-ghost{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.28);color:var(--ink)}
+.button-ghost:hover{background:rgba(255,255,255,.1)}
+.button-share{background:#25d366;color:#06220f;font-weight:700}
+.button-block{width:100%}
+.text-btn{background:none;border:0;padding:10px 6px;min-height:44px;color:var(--muted);font-size:13px;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.text-btn:hover{color:var(--ink)}
+
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:22px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+/* Reveal on scroll (disabled under reduced motion by JS) */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity 1s ease,transform 1s var(--ease)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal.delay{transition-delay:.15s}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);max-width:calc(100% - 36px);padding:12px 20px;border-radius:999px;background:rgba(20,16,40,.94);border:1px solid var(--line);color:var(--ink);font-size:14px;opacity:0;pointer-events:none;transition:opacity .4s,transform .4s var(--ease);z-index:200;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* Motion preferences */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+  .snow-canvas{display:none}
+}

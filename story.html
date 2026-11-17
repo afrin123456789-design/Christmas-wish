@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0a1d">
+  <meta name="description" content="The story behind a little letter, and how a letter becomes a link you can share.">
+  <title>The Story · A Little Christmas, A Little Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/story.css">
+</head>
+<body class="story-page">
+  <canvas class="snow-canvas" id="snowCanvas" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Back to the Christmas page"><span class="brand-star">✳</span><span>everyday <i>with</i> afrin</span></a>
+    <button class="snow-toggle" id="snowToggle" type="button" aria-pressed="true"><span aria-hidden="true">❄</span><span class="snow-label">Snow on</span></button>
+  </header>
+
+  <main>
+    <!-- Chapter 0: a 3D hero made of gifts, orbits and a spinning star -->
+    <section class="s-hero" aria-labelledby="storyTitle">
+      <div class="hero3d" aria-hidden="true">
+        <div class="cube-tower">
+          <div class="cube c1"><i class="f front"></i><i class="f back"></i><i class="f right"></i><i class="f left"></i><i class="f top"></i><i class="f bottom"></i></div>
+          <div class="cube c2"><i class="f front"></i><i class="f back"></i><i class="f right"></i><i class="f left"></i><i class="f top"></i><i class="f bottom"></i></div>
+          <div class="cube c3"><i class="f front"></i><i class="f back"></i><i class="f right"></i><i class="f left"></i><i class="f top"></i><i class="f bottom"></i></div>
+        </div>
+        <div class="ring">
+          <span style="--a:0deg"></span><span style="--a:30deg"></span><span style="--a:60deg"></span><span style="--a:90deg"></span><span style="--a:120deg"></span><span style="--a:150deg"></span><span style="--a:180deg"></span><span style="--a:210deg"></span><span style="--a:240deg"></span><span style="--a:270deg"></span><span style="--a:300deg"></span><span style="--a:330deg"></span>
+        </div>
+        <div class="spin-star"><i></i><i></i></div>
+      </div>
+      <div class="s-hero-copy reveal">
+        <p class="kicker">The story · how a letter travels</p>
+        <h1 id="storyTitle">A letter is a small <em>journey.</em></h1>
+        <p>Here's how one little Christmas letter is written, sealed into a link, and opened by someone it was meant for.</p>
+        <a class="button button-primary" href="#chapters">Begin the story <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <!-- The chapters: a 3D diorama that turns as you read -->
+    <section class="s-story" id="chapters" aria-label="The story in five chapters">
+      <div class="story-grid">
+        <div class="stage-sticky">
+          <div class="diorama" id="diorama" style="--ch:0" aria-hidden="true">
+            <div class="world">
+              <div class="ground"></div>
+              <div class="cabin">
+                <div class="box" style="--w:120px;--h:90px;--c:#8a4a2a;--dark:#5c2e18">
+                  <i class="wall" style="--a:0deg"></i><i class="wall" style="--a:90deg"></i><i class="wall" style="--a:180deg"></i><i class="wall" style="--a:270deg"></i>
+                </div>
+                <div class="pyr" style="--w:140px;--h:70px;--y:90px;--c:#f3efff;--tilt:43deg">
+                  <i class="face" style="--a:0deg"></i><i class="face" style="--a:90deg"></i><i class="face" style="--a:180deg"></i><i class="face" style="--a:270deg"></i>
+                </div>
+                <i class="window"></i>
+              </div>
+              <div class="tree3d">
+                <div class="pyr" style="--w:150px;--h:110px;--y:0px;--c:#2c7a6e;--tilt:34deg"><i class="face" style="--a:0deg"></i><i class="face" style="--a:90deg"></i><i class="face" style="--a:180deg"></i><i class="face" style="--a:270deg"></i></div>
+                <div class="pyr" style="--w:115px;--h:95px;--y:72px;--c:#2f8a7b;--tilt:31deg"><i class="face" style="--a:0deg"></i><i class="face" style="--a:90deg"></i><i class="face" style="--a:180deg"></i><i class="face" style="--a:270deg"></i></div>
+                <div class="pyr" style="--w:80px;--h:80px;--y:140px;--c:#3aa08f;--tilt:27deg"><i class="face" style="--a:0deg"></i><i class="face" style="--a:90deg"></i><i class="face" style="--a:180deg"></i><i class="face" style="--a:270deg"></i></div>
+                <div class="tree-star-3d"><i></i><i></i></div>
+              </div>
+              <div class="orbs">
+                <span style="--a:0deg"></span><span style="--a:45deg"></span><span style="--a:90deg"></span><span style="--a:135deg"></span><span style="--a:180deg"></span><span style="--a:225deg"></span><span style="--a:270deg"></span><span style="--a:315deg"></span>
+              </div>
+              <div class="snow-drift"></div>
+            </div>
+            <div class="letter3d"><span>Merry Christmas</span></div>
+          </div>
+          <p class="stage-caption" id="stageCaption">Chapter 1 of 5</p>
+        </div>
+
+        <ol class="chapters">
+          <li class="chapter is-current" data-ch="0">
+            <p class="ch-num">Chapter 01</p>
+            <h2>A cold night, a warm thought.</h2>
+            <p>Somewhere someone is thinking of you. The first step is noticing it, and letting it become a few words on paper.</p>
+          </li>
+          <li class="chapter" data-ch="1">
+            <p class="ch-num">Chapter 02</p>
+            <h2>Write it the way you'd say it.</h2>
+            <p>A letter doesn't need to be perfect. It needs to be true. Keep it short, keep it kind, and let your own voice do the work.</p>
+          </li>
+          <li class="chapter" data-ch="2">
+            <p class="ch-num">Chapter 03</p>
+            <h2>Seal it into a link.</h2>
+            <p>The whole letter is packed into a single link. There's no account and no upload: the words travel inside the link itself.</p>
+          </li>
+          <li class="chapter" data-ch="3">
+            <p class="ch-num">Chapter 04</p>
+            <h2>Opened on the other side.</h2>
+            <p>They tap the link. The box opens, the envelope unfolds, and the letter appears exactly as you wrote it.</p>
+          </li>
+          <li class="chapter" data-ch="4">
+            <p class="ch-num">Chapter 05</p>
+            <h2>Then they pass it on.</h2>
+            <p>The best letters get shared. A letter you received can become the one you send next, and the warmth keeps travelling.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Sharing: four 3D cards that flip into place -->
+    <section class="s-share" aria-labelledby="shareTitle">
+      <p class="kicker reveal">How sharing works</p>
+      <h2 id="shareTitle" class="reveal">Write, seal, share, <em>open.</em></h2>
+      <div class="deck" aria-hidden="false">
+        <article class="deck-card tilt" style="--i:0">
+          <span class="step-no">01</span><h3>Write</h3><p>Name, message, a little feeling. The postcard updates as you type.</p>
+        </article>
+        <article class="deck-card tilt" style="--i:1">
+          <span class="step-no">02</span><h3>Seal</h3><p>Create the link. Your letter is packed into it, not uploaded anywhere.</p>
+        </article>
+        <article class="deck-card tilt" style="--i:2">
+          <span class="step-no">03</span><h3>Share</h3><p>Send the link on WhatsApp, or copy it into any message you like.</p>
+        </article>
+        <article class="deck-card tilt" style="--i:3">
+          <span class="step-no">04</span><h3>Open</h3><p>The link opens the surprise: box, envelope, then the letter.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Make a link -->
+    <section class="s-make" id="make-link" aria-labelledby="makeTitle">
+      <div class="make-grid">
+        <div class="make-copy reveal">
+          <p class="kicker">Try it now</p>
+          <h2 id="makeTitle">Make a link to <em>a letter.</em></h2>
+          <p>Fill in the letter below and create a link. Open it yourself to see what the recipient sees, then share it.</p>
+          <div class="facts">
+            <p><strong>Private by design.</strong> The letter sits after the <code>#</code> in the link. The website host never receives it.</p>
+            <p><strong>No tracking.</strong> There is no record of who opened the link.</p>
+            <p><strong>Length.</strong> Letters are limited to 420 characters, so links stay short enough for WhatsApp.</p>
+          </div>
+        </div>
+
+        <form class="make-form panel reveal" id="linkForm" novalidate>
+          <label class="field-label" for="s-recipient">Who is it for?</label>
+          <input id="s-recipient" maxlength="36" placeholder="Their name" autocomplete="off" required>
+          <div class="field-row">
+            <div>
+              <label class="field-label" for="s-sender">From</label>
+              <input id="s-sender" maxlength="36" placeholder="Your name" autocomplete="off" required>
+            </div>
+            <div>
+              <label class="field-label" for="s-theme">Paper</label>
+              <select id="s-theme">
+                <option value="kraft">Kraft</option>
+                <option value="aurora">Aurora</option>
+                <option value="ember">Ember</option>
+              </select>
+            </div>
+          </div>
+          <label class="field-label" for="s-message">Your message</label>
+          <textarea id="s-message" maxlength="420" rows="5" placeholder="Write something only you could say…" required></textarea>
+          <p class="char-count"><span id="s-count">0</span> / 420</p>
+          <div class="field-row">
+            <div>
+              <label class="field-label" for="s-typeface">Lettering</label>
+              <select id="s-typeface">
+                <option value="hand">Handwritten</option>
+                <option value="serif">Classic serif</option>
+                <option value="italic">Soft italic</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="s-music">Music on open</label>
+              <select id="s-music">
+                <option value="none">No music</option>
+                <option value="bells">Gentle bells</option>
+                <option value="pad">Soft pad</option>
+              </select>
+            </div>
+          </div>
+          <button class="button button-primary button-block" type="submit">Create the link <span aria-hidden="true">✧</span></button>
+
+          <div class="link-out" id="linkOut" hidden>
+            <p class="field-label">Your link</p>
+            <input id="linkField" readonly aria-label="Share link">
+            <div class="link-actions">
+              <button class="button button-ghost" id="copyLink" type="button">Copy link</button>
+              <a class="button button-share" id="waLink" href="#" target="_blank" rel="noopener noreferrer">Share on WhatsApp</a>
+              <button class="button button-ghost" id="previewLink" type="button">Open it as the recipient</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="s-close">
+      <p class="sign-off">Back to the <a href="index.html">little Christmas page</a> <span aria-hidden="true">♡</span></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Everyday with Afrin</span>
+    <span>Made with a little extra wonder ✧</span>
+    <a href="index.html">Home ↑</a>
+  </footer>
+
+  <!-- Reveal modal, shared by the page's own preview and by shared links -->
+  <div class="reveal-modal" id="revealModal" data-step="box" role="dialog" aria-modal="true" aria-labelledby="resultRecipient" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close">×</button>
+      <button class="skip-btn" id="skipReveal" type="button">Skip the magic</button>
+      <div class="reveal-stage">
+        <div class="gift-stage" id="giftStage">
+          <button class="gift-box" id="giftBox" type="button" aria-label="Open the gift">
+            <span class="gb-lid"><span class="gb-lid-ribbon"></span></span>
+            <span class="gb-body"><span class="gb-ribbon-v"></span><span class="gb-ribbon-h"></span><span class="gb-mono">A·F</span></span>
+            <span class="gb-bow" aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="envelope-stage" id="envelopeStage">
+          <button class="envelope" id="envelope" type="button" aria-label="Open the envelope">
+            <span class="env-flap"></span><span class="env-body"></span><span class="env-seal">♡</span>
+          </button>
+        </div>
+        <article class="letter theme-kraft type-hand" id="letter" aria-live="polite">
+          <p class="letter-to">A little note for</p>
+          <h2 id="resultRecipient">You</h2>
+          <p class="letter-message" id="resultMessage"></p>
+          <p class="letter-sign">With love &amp; warm wishes,<strong id="resultSender"></strong></p>
+        </article>
+      </div>
+      <p class="step-hint" id="stepHint">Tap the box to open it.</p>
+      <div class="modal-actions" id="modalActions" hidden>
+        <button class="button button-primary" id="downloadCard" type="button">Download the postcard</button>
+        <button class="button button-share" id="shareGift" type="button">Share on WhatsApp</button>
+        <div class="modal-row">
+          <button class="text-btn" id="replayGift" type="button">Replay ↺</button>
+          <button class="text-btn" id="muteMusic" type="button" hidden>Mute music</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js" defer></script>
+  <script src="js/snow.js" defer></script>
+  <script src="js/story-3d.js" defer></script>
+  <script src="js/share.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/export.js" defer></script>
+</body>
+</html>
